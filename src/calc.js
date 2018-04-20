@@ -20,7 +20,7 @@ class Age {
   }
 
   mercuryYears() {
-    let mercuryAge = this.earthAge / .24;
+    let mercuryAge = Math.floor(this.earthAge / .24);
     return this.mercuryAge = mercuryAge;
   }
 
