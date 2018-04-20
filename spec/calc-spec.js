@@ -1,7 +1,7 @@
 import { Age } from './../src/calc.js';
 
 describe('Age', function() {
-  var age;
+  let age;
   beforeEach(function() {
     age = new Age("03/20/1986", 81)
   });
@@ -43,11 +43,18 @@ describe('Age', function() {
   it('should convert life expectancy age to Mercury years', function() {
     expect(age.mercuryDeath()).toEqual(337)
   })
+})
 
-  // it('should return years passed for life expectancy on Mercury', function() {
-  //   expect(age.mercuryYears()).toEqual(375)
-  //   expect(age.mercuryDeath()).toEqual(345)
-  //   expect(age.this.yearsPassed).toEqual(30)
-  // })
+describe('Age', function() {
+  let age;
+  beforeEach(function() {
+    age = new Age("03/20/1928", 81)
+  });
 
+  it('should return years passed from life expectancy on Mercury', function() {
+    expect(age.earthYears()).toEqual(90)
+    expect(age.mercuryYears()).toEqual(375)
+    expect(age.mercuryDeath()).toEqual(337)
+    expect(age.yearsPassed()).toEqual(38)
+  })
 })

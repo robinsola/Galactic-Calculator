@@ -4,13 +4,13 @@ class Age {
     this.lifeExpectAge = lifeExpectAge;
     this.birthDate = new Date(this.inputBirth);
     this.currentDate = new Date();
-    this.yearsPassed = 0;
     this.earthAge = 0;
     this.earthSeconds = 0;
     this.mercuryAge = 0;
     this.venusAge = 0;
     this.marsAge = 0;
     this.jupiterAge = 0;
+    this.mercDeathAge = 0;
   }
 
   earthYears() {
@@ -50,8 +50,13 @@ class Age {
   }
 
   mercuryDeath() {
-    let mercuryDeath = Math.floor(this.lifeExpectAge / .24);
-    return mercuryDeath;
+    let mercDeathAge = Math.floor(this.lifeExpectAge / .24);
+    return this.mercDeathAge = mercDeathAge;
+  }
+
+  yearsPassed() {
+    let extraYears = (this.mercuryAge - this.mercDeathAge);
+    return extraYears;
   }
 
 }
