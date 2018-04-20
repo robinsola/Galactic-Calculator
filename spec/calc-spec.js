@@ -12,22 +12,28 @@ describe('Age', function() {
     expect(age.calcSeconds()).toEqual(1009152000)
   })
 
-  it('should convert user earth years to Mercury years', function() {
-    let age = new Age("03-20-86")
+  it('should convert user Earth years to Mercury years', function() {
+    let age = new Age("03-20-1986")
     expect(age.earthYears()).toEqual(32)
     expect(age.mercuryYears()).toEqual(133)
   })
 
-  it('should convert user earth years to Venus years', function() {
+  it('should convert user Earth years to Venus years', function() {
     let age = new Age("March 20 1986")
     expect(age.earthYears()).toEqual(32)
     expect(age.venusYears()).toEqual(51)
   })
 
-  it('should convert user earth years to Mars years', function() {
+  it('should convert user Earth years to Mars years', function() {
     let age = new Age("3/20/86")
     expect(age.earthYears()).toEqual(32)
     expect(age.marsYears()).toEqual(17)
+  })
+
+  it('should convert user Earth years to Jupiter years', function() {
+    let age = new Age("03/20/1986")
+    expect(age.earthYears()).toEqual(32)
+    expect(age.jupiterYears()).toEqual(2)
   })
 
 })
