@@ -12,6 +12,12 @@ describe('Age', function() {
     expect(age.calcSeconds()).toEqual(1009152000)
   })
 
+  it('should find difference between two dates and return the seconds', function() {
+    let age = new Age("03-20-86")
+    expect(age.earthYears()).toEqual(32)
+    expect(age.findDiff()).toBeGreaterThan(1012565762.389)
+  })
+
   it('should convert user Earth years to Mercury years', function() {
     let age = new Age("03-20-1986")
     expect(age.earthYears()).toEqual(32)

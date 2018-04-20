@@ -13,7 +13,6 @@ class Age {
   }
 
   earthYears() {
-    // let birthDate = new Date(this.inputBirth);
     let currentDate = new Date().getFullYear();
     let birthYear = this.birthDate.getFullYear();
     let earthAge = currentDate - birthYear;
@@ -23,6 +22,11 @@ class Age {
   calcSeconds() {
     let earthSeconds = this.earthAge * 31536000;
     return this.earthSeconds = earthSeconds;
+  }
+
+  findDiff() {
+    let difference = (this.currentDate - this.birthDate) / 1000;
+    return difference;
   }
 
   mercuryYears() {
