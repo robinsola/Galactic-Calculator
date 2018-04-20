@@ -42,4 +42,9 @@ describe('Age', function() {
     expect(age.jupiterYears()).toEqual(2)
   })
 
+  it('should convert life expectancy age to Mercury years', function() {
+    let age = new Age("03/20/1986", 83)
+    expect(age.mercuryDeath()).toEqual(345)
+  })
+
 })

@@ -1,8 +1,8 @@
 class Age {
-  constructor(inputBirth, inputDeath) {
+  constructor(inputBirth, lifeExpectAge) {
     this.inputBirth = inputBirth;
+    this.lifeExpectAge = lifeExpectAge;
     this.birthDate = new Date(this.inputBirth);
-    this.inputDeath = inputDeath;
     this.currentDate = new Date();
     this.earthAge = 0;
     this.earthSeconds = 0;
@@ -18,15 +18,14 @@ class Age {
     let earthAge = currentDate - birthYear;
     return this.earthAge = earthAge;
   }
-
   calcSeconds() {
     let earthSeconds = this.earthAge * 31536000;
     return this.earthSeconds = earthSeconds;
   }
-
+  //is findDiff a more accurate calculation of calcSeconds?
   findDiff() {
-    let difference = (this.currentDate - this.birthDate) / 1000;
-    return difference;
+    let toTheSecond = (this.currentDate - this.birthDate) / 1000;
+    return toTheSecond;
   }
 
   mercuryYears() {
@@ -47,6 +46,11 @@ class Age {
   jupiterYears() {
     let jupiterAge = Math.floor(this.earthAge / 11.86);
     return this.jupiterAge = jupiterAge;
+  }
+
+  mercuryDeath() {
+    let mercuryDeath = Math.floor(this.lifeExpectAge / .24);
+    return mercuryDeath;
   }
 
 }
