@@ -4,6 +4,7 @@ class Age {
     this.lifeExpectAge = lifeExpectAge;
     this.birthDate = new Date(this.inputBirth);
     this.currentDate = new Date();
+    this.yearsPassed = 0;
     this.earthAge = 0;
     this.earthSeconds = 0;
     this.mercuryAge = 0;
