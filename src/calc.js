@@ -1,6 +1,9 @@
 class Age {
-  constructor(inputDate) {
-    this.inputDate = inputDate;
+  constructor(inputBirth, inputDeath) {
+    this.inputBirth = inputBirth;
+    this.birthDate = new Date(this.inputBirth);
+    this.inputDeath = inputDeath;
+    this.currentDate = new Date();
     this.earthAge = 0;
     this.earthSeconds = 0;
     this.mercuryAge = 0;
@@ -10,9 +13,9 @@ class Age {
   }
 
   earthYears() {
-    let birthDate = new Date(this.inputDate);
+    // let birthDate = new Date(this.inputBirth);
     let currentDate = new Date().getFullYear();
-    let birthYear = birthDate.getFullYear();
+    let birthYear = this.birthDate.getFullYear();
     let earthAge = currentDate - birthYear;
     return this.earthAge = earthAge;
   }
