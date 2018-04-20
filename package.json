@@ -1,13 +1,13 @@
 {
   "name": "space-age-calc",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "build": "webpack --mode development",
-    "start": "npm run build; webpack-dev-server --open --mode development",
-    "lint": "eslint src/*.js",
-    "test": "karma start karma.conf.js",
-    "fix": "eslint --fix src/*.js"
+    "main": "index.js",
+    "scripts": {
+      "build": "webpack --mode development",
+      "start": "npm run build; webpack-dev-server --open --mode development",
+      "lint": "eslint src/*.js",
+      "test": "karma start karma.conf.js",
+      "fix": "eslint --fix src/*.js"
   },
   "author": "",
   "license": "ISC",
@@ -40,4 +40,14 @@
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robinsola/Project-Template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robinsola/Project-Template/issues"
+  },
+  "homepage": "https://github.com/robinsola/Project-Template#readme"
 }
