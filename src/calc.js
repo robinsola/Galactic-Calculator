@@ -17,6 +17,7 @@ class Age {
     let earthSeconds = this.earthAge * 31536000;
     return this.earthSeconds = earthSeconds;
   }
+  
 }
 
 export {Age};
