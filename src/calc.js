@@ -51,13 +51,20 @@ class Age {
 
   mercuryDeath() {
     let mercDeathAge = Math.floor(this.lifeExpectAge / .24);
-    return this.mercDeathAge = mercDeathAge;
+    let extraMercYears = (this.mercuryAge - mercDeathAge);
+    if (this.mercuryAge > mercDeathAge) {
+      return extraMercYears;
+    } else {
+      return this.mercDeathAge = mercDeathAge;
+    }
   }
 
-  yearsPassed() {
-    let extraYears = (this.mercuryAge - this.mercDeathAge);
-    return extraYears;
-  }
+  // yearsPassed() {
+  //   let extraYears = (this.mercuryAge - this.mercDeathAge);
+  //   if (this.mercuryAge > this.mercDeathAge) {
+  //     return extraYears;
+  //   }
+  // }
 
 }
 
