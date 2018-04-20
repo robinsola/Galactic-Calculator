@@ -68,4 +68,11 @@ describe('Age', function() {
     expect(age.marsYears()).toEqual(47)
     expect(age.marsDeath()).toEqual(4)
   })
+
+  it('should return years passed from life expectancy on Jupiter', function() {
+    expect(age.earthYears()).toEqual(90)
+    expect(age.jupiterYears()).toEqual(7)
+    expect(age.jupiterDeath()).toEqual(1)
+  })
+
 })

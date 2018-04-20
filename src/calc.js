@@ -79,6 +79,16 @@ class Age {
     }
   }
 
+  jupiterDeath() {
+    let jupDeathAge = Math.floor(this.lifeExpectAge / 11.86);
+    let extraJupYears = (this.jupiterAge - jupDeathAge);
+    if (this.jupiterAge > jupDeathAge) {
+      return extraJupYears;
+    } else {
+      return jupDeathAge;
+    }
+  }
+
 }
 
 export {Age};
