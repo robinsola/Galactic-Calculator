@@ -18,4 +18,10 @@ describe('Age', function() {
     expect(age.mercuryYears()).toEqual(133)
   })
 
+  it('should convert user earth years to venus years', function() {
+    let age = new Age("March 20 1986")
+    expect(age.earthYears()).toEqual(32)
+    expect(age.venusYears()).toEqual(51)
+  })
+
 })
