@@ -6,4 +6,10 @@ describe('Age', function() {
     expect(age.earthYears()).toEqual(32)
   });
 
+  it('should calculate user earth years in seconds', function() {
+    let age = new Age("03-20-86")
+    expect(age.earthYears()).toEqual(32)
+    expect(age.calcSeconds()).toEqual(1009152000)
+  })
+
 })
