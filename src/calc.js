@@ -5,12 +5,10 @@ class Age {
     this.birthDate = new Date(this.inputBirth);
     this.currentDate = new Date();
     this.earthAge = 0;
-    this.earthSeconds = 0;
     this.mercuryAge = 0;
     this.venusAge = 0;
     this.marsAge = 0;
     this.jupiterAge = 0;
-    this.mercDeathAge = 0;
   }
 
   earthYears() {
@@ -19,14 +17,15 @@ class Age {
     let earthAge = currentDate - birthYear;
     return this.earthAge = earthAge;
   }
+
   calcSeconds() {
     let earthSeconds = this.earthAge * 31536000;
-    return this.earthSeconds = earthSeconds;
+    return earthSeconds;
   }
-  //is findDiff a more accurate calculation of calcSeconds?
-  findDiff() {
-    let toTheSecond = (this.currentDate - this.birthDate) / 1000;
-    return toTheSecond;
+
+  exactSeconds() {
+    let preciseAge = (this.currentDate - this.birthDate) / 1000;
+    return preciseAge;
   }
 
   mercuryYears() {
@@ -55,7 +54,7 @@ class Age {
     if (this.mercuryAge > mercDeathAge) {
       return extraMercYears;
     } else {
-      return this.mercDeathAge = mercDeathAge;
+      return mercDeathAge;
     }
   }
 
@@ -88,7 +87,6 @@ class Age {
       return jupDeathAge;
     }
   }
-
 }
 
 export {Age};
