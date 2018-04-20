@@ -51,15 +51,21 @@ describe('Age', function() {
     age = new Age("03/20/1928", 81)
   });
 
-  it('should return years passed from life expectancy on Mercury, if age is greater than life expectancy', function() {
+  it('should return years passed from life expectancy on Mercury', function() {
     expect(age.earthYears()).toEqual(90)
     expect(age.mercuryYears()).toEqual(375)
     expect(age.mercuryDeath()).toEqual(38)
   })
 
-  it('should return years passed from life expectancy on Venus, if age is greater than life expectancy', function() {
+  it('should return years passed from life expectancy on Venus', function() {
     expect(age.earthYears()).toEqual(90)
     expect(age.venusYears()).toEqual(145)
     expect(age.venusDeath()).toEqual(15)
+  })
+
+  it('should return years passed from life expectancy on Mars', function() {
+    expect(age.earthYears()).toEqual(90)
+    expect(age.marsYears()).toEqual(47)
+    expect(age.marsDeath()).toEqual(4)
   })
 })

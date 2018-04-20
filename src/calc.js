@@ -59,12 +59,25 @@ class Age {
     }
   }
 
-  // yearsPassed() {
-  //   let extraYears = (this.mercuryAge - this.mercDeathAge);
-  //   if (this.mercuryAge > this.mercDeathAge) {
-  //     return extraYears;
-  //   }
-  // }
+  venusDeath() {
+    let venusDeathAge = Math.floor(this.lifeExpectAge / .62);
+    let extraVenusYears = (this.venusAge - venusDeathAge);
+    if (this.venusAge > venusDeathAge) {
+      return extraVenusYears;
+    } else {
+      return venusDeathAge;
+    }
+  }
+
+  marsDeath() {
+    let marsDeathAge = Math.floor(this.lifeExpectAge / 1.88);
+    let extraMarsYears = (this.marsAge - marsDeathAge);
+    if (this.marsAge > marsDeathAge) {
+      return extraMarsYears;
+    } else {
+      return marsDeathAge;
+    }
+  }
 
 }
 
