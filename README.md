@@ -5,13 +5,13 @@ An application that takes your age and converts it to how old you would be at ce
 ## Specs
 |behavior|input|output|
 |--------|-----|------|
-|register input as a number|32|true|
-||||
-|convert number in years to seconds|32|1.009e+9|
-|convert number in years to mercury years|32||
-|convert number in years to venus years|32||
-|convert number in years to mars years|32||
-|convert number in years to jupiter years|32||
+|convert birthdate to age in Earth years|03-20-1986|32|
+|calculate seconds between two dates|03-20-1986, 04-20-2018||
+|convert Earth years to seconds|32|1009152000|
+|convert Earth years to Mercury years|32|133|
+|convert Earth years to Venus years|32|51|
+|convert Earth years to mars years|32|17|
+|convert Earth years to jupiter years|32|2|
 |calculate life expectancy for each planet|102||
 
 ## Installation
