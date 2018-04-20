@@ -5,6 +5,7 @@ class Age {
     this.earthSeconds = 0;
     this.mercuryAge = 0;
     this.venusAge = 0;
+    this.marsAge = 0;
   }
 
   earthYears() {
@@ -28,6 +29,11 @@ class Age {
   venusYears() {
     let venusAge = Math.floor(this.earthAge / .62);
     return this.venusAge = venusAge;
+  }
+
+  marsYears() {
+    let marsAge = Math.floor(this.earthAge / 1.88);
+    return this.marsAge = marsAge;
   }
 
 }
