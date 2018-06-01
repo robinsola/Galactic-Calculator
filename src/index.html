@@ -4,24 +4,54 @@
     <title>Galactic Space Age Calculator</title>
   </head>
   <body>
-    <div class = "container">
-      <h1>Galactic Space Age Calculator</h1>
-      <p>An application that takes your age and converts it to how old you would be at certain locations in outer space. Calculate your age in seconds. Find out how old you would be on Mercury, Venus, Mars, or Jupiter. Determine how many years you have left to live on each planet!</p>
+    <div class="header">
+      <h1>Galactic Age Calculator</h1>
+    </div>
+    <div class="timer">
+      <h4>Greetings <span class="name-output"></span></h4>
+      <h4>You are <span id="timer"></span> seconds old</h4>
+    </div>
+    <div class="wrapper">
       <form id="calculator">
         <div class="form-group">
-          <label for="birthdate">Your Birthdate:</label>
-          <input id="birthdate" class="form-control" placeholder="XX-XX-XXXX">
+          <label for="user-name">Your Name:</label>
+          <input id="user-name" class="form-control">
         </div>
         <div class="form-group">
-          <p>Based on your demographic, at what age do you expect to live?</p>
-          <label for="life-expectancy">Life Expectancy Age:</label>
-          <input id="life-expectancy" class="form-control" placeholder="XXX">
+          <label for="birthdate">Your Birthdate:</label>
+          <input type="date" id="birthdate" class="form-control">
         </div>
-        <button type="submit" class="btn btn-danger">submit</button>
+        <div class="form-group">
+          <label for="life-expectancy">Life Expectancy Age:</label>
+          <input id="life-expectancy" class="form-control">
+        </div>
+        <button type="submit" class="btn">submit</button>
       </form>
+    </div>
       <br>
       <div class="output">
+        <div class="grid">
+          <div class="earth-output">
+            <h3>Earth</h3>
+            <h5>Age: <span class="earth-age"></span> years</h5>
+            <h6>Years Left: <span class="earth-death"></span></h6>
+          </div>
+          <div class="mercury-output">
+            <h3>Mercury</h3>
+            <h5>Age: <span class="mercury-age"></span> years</h5>
+            <h6>Years Left: <span class="mercury-death"></span></h6>
+          </div>
+          <div class="venus-output">
+            <h3>Venus</h3>
+            <h5>Age: <span class="venus-age"></span> years</h5>
+            <h6>Years Left: <span class="venus-death"></span></h6>
+          </div>
+          <div class="jupiter-output">
+            <h3>Jupiter</h3>
+            <h5>Age: <span class="jupiter-age"></span> years</h5>
+            <h6>Years Left: <span class="jupiter-death"></span></h6>
+          </div>
+        </div>
       </div>
-    </div>
   </body>
 </html>
