@@ -4,6 +4,7 @@ class Age {
     this.lifeExpectAge = lifeExpectAge;
     this.birthDate = new Date(this.inputBirth);
     this.currentDate = new Date();
+    this.counter = 0;
     this.earthAge = 0;
     this.mercuryAge = 0;
     this.venusAge = 0;
@@ -25,7 +26,14 @@ class Age {
 
   exactSeconds() {
     let preciseAge = (this.currentDate - this.birthDate) / 1000;
-    return preciseAge;
+    return this.counter = preciseAge;
+  }
+
+  ageTimer() {
+    this.counter = Math.floor((this.currentDate - this.birthDate) / 1000);
+    setInterval(() => {
+      this.counter++;
+    }, 1000);
   }
 
   mercuryYears() {
