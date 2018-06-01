@@ -1,0 +1,92 @@
+body {
+  /* background-image: url("http://trancentral.tv/wp-content/uploads/2018/04/wallpaper-hd-planet-25.jpg"); */
+  background-image: url("https://i.pinimg.com/originals/82/a5/5b/82a55b2407405584ea866dd0df3ccb7a.jpg");
+  font-weight: 100;
+  color: white;
+}
+
+h1 {
+  margin-top: 20px;
+  font-family: monospace;
+  text-align: center;
+}
+
+.timer {
+  display: none;
+  text-align: center;
+}
+
+#timer {
+  color: yellow;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid white;
+  color: white;
+}
+
+.btn:hover {
+  box-shadow: 0 0 3px 3px blue;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.output {
+  display: none;
+}
+
+.grid {
+  margin-bottom: 20px;
+  display: grid;
+  grid-gap: 10px;
+  justify-content: center;
+  grid-template-areas:
+  "earth mercury"
+  "venus jupiter";
+}
+
+.earth-output {
+  grid-area: earth;
+  background-color: rgba(0, 225, 0, 0.5);
+  border-radius: 5px;
+  width: 300px;
+  padding: 30px;
+}
+
+.mercury-output {
+  grid-area: mercury;
+  background-color: rgba(102, 0, 102, 0.5);
+  border-radius: 5px;
+  width: 300px;
+  padding: 30px;
+}
+
+.venus-output {
+  grid-area: venus;
+  background-color: rgba(225, 0, 0, 0.5);
+  border-radius: 5px;
+  width: 300px;
+  padding: 30px;
+}
+
+.jupiter-output {
+  grid-area: jupiter;
+  background-color: rgba(0, 0, 225, 0.5);
+  border-radius: 5px;
+  width: 300px;
+  padding: 30px;
+}
+
+#calculator {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: .5px solid white;
+  border-radius: 5px;
+  width: 300px;
+  padding: 30px;
+}
